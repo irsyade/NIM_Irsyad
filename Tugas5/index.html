@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Pendaftaran Event</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <div class="card shadow-lg p-4">
+        <h2 class="mb-4 text-center">Form Pendaftaran Event</h2>
+        
+        <form>
+          
+          <!-- Nama lengkap -->
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="nama" name="nama" required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+
+          <!-- Nomor HP -->
+          <div class="mb-3">
+            <label for="hp" class="form-label">Nomor HP</label>
+            <input type="text" class="form-control" id="hp" name="hp" 
+                   pattern="^[0-9]{10,13}$" required>
+            <div class="form-text">Format: 10–13 digit angka (contoh: 081234567890)</div>
+          </div>
+
+          <!-- Program studi -->
+          <div class="mb-3">
+            <label for="prodi" class="form-label">Program Studi</label>
+            <select class="form-select" id="prodi" name="prodi" required>
+              <option value="">-- Pilih Program Studi --</option>
+              <option value="TRKJ">Teknik Rekayasa Komputer & Jaringan</option>
+              <option value="TRPL">Teknik Rekayasa Perankat Lunak</option>
+              <option value="TRMG">Teknik Rekayasa Multimedia Grafis </option>
+            </select>
+          </div>
+
+          <!-- Minat -->
+          <div class="mb-3">
+            <label class="form-label">Minat (pilih minimal 1)</label><br>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="minat1" name="minat[]" value="Web" required>
+              <label class="form-check-label" for="minat1">Pengembangan Web</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="minat2" name="minat[]" value="Mobile">
+              <label class="form-check-label" for="minat2">Pengembangan Mobile</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="minat3" name="minat[]" value="UI/UX">
+              <label class="form-check-label" for="minat3">UI/UX Design</label>
+            </div>
+          </div>
+
+          <!-- Jenis kelamin -->
+          <div class="mb-3">
+            <label class="form-label">Jenis Kelamin</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="laki" name="gender" value="Laki-laki" required>
+              <label class="form-check-label" for="laki">Laki-laki</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="perempuan" name="gender" value="Perempuan">
+              <label class="form-check-label" for="perempuan">Perempuan</label>
+            </div>
+          </div>
+
+          <!-- Bio singkat -->
+          <div class="mb-3">
+            <label for="bio" class="form-label">Bio Singkat</label>
+            <textarea class="form-control" id="bio" name="bio" rows="3" minlength="20" maxlength="200" placeholder="Tulis sedikit tentang dirimu..."></textarea>
+            <div class="form-text">Minimal 20 karakter, maksimal 200 karakter.</div>
+          </div>
+
+          <!-- Persetujuan S&K -->
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="setuju" required>
+            <label class="form-check-label" for="setuju">Saya menyetujui Syarat & Ketentuan</label>
+          </div>
+
+          <!-- Tombol submit -->
+          <button type="submit" class="btn btn-primary w-100">Daftar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
